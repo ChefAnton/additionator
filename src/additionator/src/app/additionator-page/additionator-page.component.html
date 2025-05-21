@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <form [formGroup]="additionForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="number1">Number 1:</label>
+      <input
+        type="number"
+        id="number1"
+        formControlName="number1"
+        placeholder="Enter an integer"
+        class="form-control"
+      >
+      @if (number1?.invalid && (number1?.dirty || number1?.touched)) {
+        <div class="error-message">
+          @if (number1?.errors?.['required']) {
+            <small>Number 1 is required.</small>
+          }
+          @if (number1?.errors?.['pattern']) {
+            <small>Number 1 must be an integer.</small>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="number2">Number 2:</label>
+      <input
+        type="number"
+        id="number2"
+        formControlName="number2"
+        placeholder="Enter an integer"
+        class="form-control"
+      >
+      @if (number2?.invalid && (number2?.dirty || number2?.touched)) {
+        <div class="error-message">
+          @if (number2?.errors?.['required']) {
+            <small>Number 2 is required.</small>
+          }
+          @if (number2?.errors?.['pattern']) {
+            <small>Number 2 must be an integer.</small>
+          }
+        </div>
+      }
+    </div>
+
+    <button type="submit" [disabled]="!additionForm.valid" class="submit-button">
+      Submit
+    </button>
+  </form>
+</div>

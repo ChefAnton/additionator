@@ -1,0 +1,12 @@
+/* Global styles.css */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* Better box model for easier layout */
+}
+
+/*
+  The sum-display-page component sets html, body height to 100vh.
+  If you want other pages to not be full height, ensure their containers
+  have their own height settings.
+*/

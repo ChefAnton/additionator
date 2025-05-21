@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars on body/html for this page */
+}
+
+.sum-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e9e9e9; /* A light background for the page */
+  overflow: hidden; /* Ensure container itself doesn't cause scroll if text is huge */
+  padding: 10px; /* Small padding so text doesn't touch edges */
+  box-sizing: border-box;
+}
+
+.sum-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #333;
+  font-size: 20vw; /* Responsive font size based on viewport width */
+  line-height: 1; /* Keep line height tight */
+  text-align: center;
+  white-space: nowrap; /* Try to keep the sum on one line */
+  overflow: hidden; /* Hide parts of text that might overflow the span */
+  text-overflow: ellipsis; /* Show ellipsis if text overflows its container (span) */
+  max-width: 100%; /* Ensure span doesn't exceed container width */
+}
