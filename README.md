@@ -1,5 +1,6 @@
 # additionator
 An AI built web app, started with a simple prompt:
+
 Create a system specification for the following requirements:
 - Angular UI
   - 2 pages
